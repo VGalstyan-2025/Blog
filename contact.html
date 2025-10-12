@@ -1,33 +1,77 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contact</title>
+        <title>My first blog</title>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+        <style>
+            main{
+                box-shadow: 0 6px 20px #1d72b8 !important;
+            }
+        </style>
     </head>
     <body>
-        <header>
-            <div class="logo">
+        <div class="site">
+            <header>
+                <div class="logo">
+                    <img src="./images/logo.jpg" alt="logo" style="height: 36px;">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
 
-            </div>
-            <nav>
+
+            <main>
+                <h2>Կապ մեզ հետ</h2>
+                <form>
+                    <div>
+                        <label for="name">Անուն Ազգանուն</label>
+                        <input type="text" id="name" name="name" placeholder="Գրեք ձեր անուն ազգանունը" >
+                    </div>
+
+                    <div>
+                        <label for="phone">Հեռախոսահամար</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+374 ..." >
+                    </div>
+
+                    <div>
+                        <label for="email">Էլ. հասցե</label>
+                        <input type="email" id="email" name="email" placeholder="example@mail.com" >
+                    </div>
+
+                    <div>
+                        <label for="age">Տարիք</label>
+                        <input type="number" id="age" name="age" min="1" max="120" >
+                    </div>
+
+                    <div>
+                        <label>Սեռ</label>
+                        <div class="gender-group">
+                            <label><input type="radio" name="gender" value="male" > Արական</label>
+                            <label><input type="radio" name="gender" value="female"> Իգական</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="message">Նամակ</label>
+                        <textarea id="message" name="message" placeholder="Գրեք ձեր նամակը այստեղ..."></textarea>
+                    </div>
+
+                    <button type="submit">Ուղարկել</button>
+                </form>
+            </main>
+            <footer>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li>Armenia, Tavush, Ijevan valance 16</li>
+                    <li><a href="mailto:blog@blog.blog">blog@blog.blog</a></li>
+                    <li><a href="tel:+37477111111">+374 (77) 111 111</a></li>
                 </ul>
-            </nav>
-        </header>
-        <main>
-
-        </main>
-        <footer>
-            <ul>
-                <li>Armenia, Tavush, Ijevan valance 16</li>
-                <li><a href="mailto:blog@blog.blog">blog@blog.blog</a></li>
-                <li><a href="tel:+37477111111">+374 (77) 111 111</a></li>
-            </ul>
-        </footer>
+            </footer>
+        </div>
     </body>
 </html>
