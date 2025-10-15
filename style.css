@@ -77,6 +77,14 @@ main{
     flex-direction:column;
     gap:0.5rem;
     flex:1 0 auto;
+    background-color: rgb(245, 245, 19);
+    animation: colorChange 6s infinite ;
+}
+@keyframes colorChange{
+    0% {background-color: rgb(106, 153, 239); }
+    33% {background-color: rgb(146, 241, 139); }
+    66% {background-color: rgb(234, 128, 213); }
+    100% {background-color: rgb(106, 153, 239); }
 }
 .news-body h3{
     margin:0;
@@ -198,4 +206,13 @@ main img {
         transition:transform .2s ease;
         box-shadow:0 14px 30px rgba(15,15,15,0.08);
     }
+}
+footer{
+    background-image: linear-gradient(to left, #ccd4db, #1d72b8);
+}
+article img {
+    transition: transform 0.3s ease; 
+}
+    article img:hover {
+    transform: rotate(45deg);
 }
