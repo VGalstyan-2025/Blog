@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My first blog</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                font-family: 'Segoe UI', sans-serif;
+                background: linear-gradient(135deg, #dfe9f3, #ffffff);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: start;
+                min-height: 100vh;
+                padding: 30px;
+            }
+            h1 {
+                color: #333;
+                margin-bottom: 20px;
+            }
+            .container {
+                background: white;
+                border-radius: 16px;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                padding: 30px;
+                width: 90%;
+                max-width: 500px;
+            }
+            input, button, select {
+                width: 100%;
+                padding: 10px;
+                margin: 8px 0;
+                font-size: 1rem;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+            }
+            button {
+                background-color: #0078d7;
+                color: white;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            button:hover {
+                background-color: #005fa3;
+            }
+            .result {
+                margin-top: 15px;
+                font-weight: bold;
+                color: #333;
+                background: #f8f8f8;
+                border-radius: 8px;
+                padding: 10px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="site">
+            <header>
+                <div class="logo">
+                    <img src="./images/logo.jpg" alt="logo" style="height: 36px;">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="js.html">Js</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+                <h1>JavaScript Ֆունկցիաների Օրինակ</h1>
+                <div class="container">
+                    <label for="inputValue">Մուտքագրիր թիվ կամ տեքստ։<br>.Ուշադրություն զանգվածի տարրերը պետք է բաժանված լինեն , -ներով <br> ․2️⃣1️⃣-ից 2️⃣5️⃣-ի համառ մուտքագռել այս տեսքով {"name": "Varduhi", "age": 25, "city": "Ijevan"}</label>
+                    <input type="text" id="inputValue" placeholder="օր.՝ 12.345 կամ Բարև աշխարհ" />
+
+                    <select id="functionSelect">
+                        <option value="round">1️⃣ Կլորացնել մինչև 2 տասնորդական</option>
+                        <option value="isNumber">2️⃣ Ստուգել՝ թիվ է թե ոչ</option>
+                        <option value="lengthOfNumber">3️⃣ Թվի երկարությունը (string)</option>
+                        <option value="integerPart">4️⃣ Թվի ամբողջ մասը</option>
+                        <option value="toUpper">5️⃣ Տեքստը դարձնել մեծատառ</option>
+                        <option value="containsWord">6️⃣ Ստուգել՝ պարունակում է բառ «hello»</option>
+                        <option value="replaceSpaces">7️⃣ Բացատները դարձնել _</option>
+                        <option value="firstLast3">8️⃣ Վերադարձնել առաջին և վերջին 3 նիշերը</option>
+                        <option value="trimString">9️⃣ Հեռացնել string-ի սկզբի և վերջի բացատները</option>
+                        <option value="stringLength">🔟 Վերադարձնել string-ի երկարությունը</option>
+                        <option value="addElement">1️⃣1️⃣ Ավելացնել էլեմենտ զանգվածի վերջում</option>
+                        <option value="removeLast">1️⃣2️⃣ Հեռացնել զանգվածի վերջին էլեմենտը</option>
+                        <option value="findFirstOver10">1️⃣3️⃣ Գտնել առաջին էլեմենտի ինդեքսը, որը մեծ է 10-ից</option>
+                        <option value="filterEven">1️⃣4️⃣ Վերադարձնել միայն զույգ թվերը</option>
+                        <option value="multiplyBy2">1️⃣5️⃣ Բազմապատկել բոլոր էլեմենտները 2-ով</option>
+                        <option value="sumArray">1️⃣6️⃣ Գտնել զանգվածի գումարը</option>
+                        <option value="includesElement">1️⃣7️⃣ Ստուգել՝ պարունակում է որոշակի էլեմենտ</option>
+                        <option value="mergeArrays">1️⃣8️⃣ Միացնել երկու զանգված</option>
+                        <option value="sliceArray">1️⃣9️⃣ Զանգվածի կտոր 1-ից մինչև 3</option>
+                        <option value="sortArray">2️⃣0️⃣ Դասավորել զանգվածը աճման կարգով</option>
+                        <option value="objectKeys">2️⃣1️⃣ Վերադարձնել օբյեկտի բոլոր բանալիները</option>
+                        <option value="objectValues">2️⃣2️⃣ Վերադարձնել օբյեկտի բոլոր արժեքները</option>
+                        <option value="hasKey">2️⃣3️⃣ Ստուգել՝ արդյոք օբյեկտում կա որոշակի բանալի</option>
+                        <option value="mergeObjects">2️⃣4️⃣ Միացնել երկու օբյեկտ</option>
+                        <option value="objectEntries">2️⃣5️⃣ Վերադարձնել օբյեկտի բոլոր [բանալի, արժեք] զույգերը</option>
+                    </select>
+
+                    <button onclick="runFunction()">Կատարել</button>
+
+                    <div class="result" id="result">Արդյունքը կհայտնվի այստեղ </div>
+                </div>
+            </main>
+            <footer>
+                <ul>
+                    <li>Armenia, Tavush, Ijevan valance 16</li>
+                    <li><a href="mailto:blog@blog.blog">blog@blog.blog</a></li>
+                    <li><a href="tel:+37477111111">+374 (77) 111 111</a></li>
+                </ul>
+            </footer>
+        </div>
+        <script src="script.js"> </script>
+    </body>
+</html>
