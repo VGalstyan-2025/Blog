@@ -216,3 +216,19 @@ function runFunction() {
     function objectEntries(obj) {
         return Object.entries(obj); 
     }
+
+function changeText(id) {
+    id.innerHTML = "22.10.2025!";
+}
+function addToList(){
+    const input = document.getElementById("myInput");
+    const text =input.value.trim();
+
+    if(text === "") return;
+
+    const li = document.createElement("li");
+    li.textContent = text;
+
+    document.getElementById("myList").appendChild(li);
+    input.value="";
+}

@@ -226,3 +226,19 @@ article img {
     padding: 10px;
     text-align: center;
 }
+
+.div-background_color_92c0d5{
+    background-color: #92c0d5;
+    margin-top: 25px;
+    padding: 15px;
+}
+.div-background_color_92c0d5 button{
+    width: 100px;
+}
+.div-background_color_92c0d5 button:hover{
+    background-color: #fff;
+    color: #005fa3;
+}
+.div-background_color_92c0d5 ul li{
+    color: #fff;
+}
